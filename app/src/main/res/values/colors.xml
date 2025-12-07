@@ -10,4 +10,8 @@
     <color name="colorOnSecondary">#000000</color>
     <color name="colorOnBackground">#000000</color>
     <color name="colorOnSurface">#000000</color>
+    <color name="primaryBlue">#004494</color>
+    <color name="white">#FFFFFF</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="darkText">#1F2B3A</color>
 </resources>

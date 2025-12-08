@@ -22,7 +22,7 @@
         @Override
         protected void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.fragment_city_select); // Use your existing XML
+            setContentView(R.layout.fragment_city_select_new); // Use your existing XML
 
             citySelector = findViewById(R.id.citySelector);
             Button confirmButton = findViewById(R.id.btnConfirmCity);

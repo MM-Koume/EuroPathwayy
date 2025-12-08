@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private MapView mapView;
     private MapboxMap mapboxMap;
+    private TransitRepository repo;
+    private List<String> cityNames = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Mapbox.getInstance(this, "YOUR_MAPBOX_API_KEY_HERE");
 
         setContentView(R.layout.fragment_city_select_new);
+repo = new TransitRepository(this);
 
         // UI
         citySelector = findViewById(R.id.citySelector);

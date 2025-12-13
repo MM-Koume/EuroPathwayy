@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#004494</color>
-    <color name="colorPrimaryVariant">#003366</color>
-    <color name="colorSecondary">#66A3FF</color>
-    <color name="colorSecondaryVariant">#3385FF</color>
-    <color name="colorBackground">#F2F2F2</color>
+    <!-- Primary Colors - Softer Blues -->
+    <color name="colorPrimary">#2E7BD6</color>
+    <color name="colorPrimaryVariant">#1E5BA8</color>
+    <color name="colorSecondary">#7DB8FF</color>
+    <color name="colorSecondaryVariant">#5CA3F5</color>
+
+    <!-- Background & Surface -->
+    <color name="colorBackground">#F8FAFC</color>
     <color name="colorSurface">#FFFFFF</color>
+
+    <!-- Text on Colors -->
     <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorOnSecondary">#000000</color>
-    <color name="colorOnBackground">#000000</color>
-    <color name="colorOnSurface">#000000</color>
-    <color name="primaryBlue">#004494</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#1A202C</color>
+    <color name="colorOnSurface">#2D3748</color>
+
+    <!-- Legacy/Alias Colors -->
+    <color name="primaryBlue">#2E7BD6</color>
     <color name="white">#FFFFFF</color>
     <color name="onPrimary">#FFFFFF</color>
-    <color name="darkText">#1F2B3A</color>
+    <color name="darkText">#2D3748</color>
+
+    <!-- Additional UI Colors -->
+    <color name="accentLight">#E3F2FD</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="divider">#E2E8F0</color>
 </resources>

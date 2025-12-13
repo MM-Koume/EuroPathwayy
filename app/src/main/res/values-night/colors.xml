@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#66A3FF</color>
-    <color name="colorPrimaryVariant">#3385FF</color>
-    <color name="colorSecondary">#004494</color>
-    <color name="colorSecondaryVariant">#003366</color>
-    <color name="colorBackground">#121212</color>
-    <color name="colorSurface">#1E1E1E</color>
-    <color name="colorOnPrimary">#000000</color>
+    <!-- Primary Colors - Brighter for Dark Mode -->
+    <color name="colorPrimary">#5CA3F5</color>
+    <color name="colorPrimaryVariant">#7DB8FF</color>
+    <color name="colorSecondary">#2E7BD6</color>
+    <color name="colorSecondaryVariant">#1E5BA8</color>
+
+    <!-- Background & Surface - Softer Blacks -->
+    <color name="colorBackground">#0F1419</color>
+    <color name="colorSurface">#1A1F28</color>
+
+    <!-- Text on Colors -->
+    <color name="colorOnPrimary">#0F1419</color>
     <color name="colorOnSecondary">#FFFFFF</color>
-    <color name="colorOnBackground">#FFFFFF</color>
-    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorOnBackground">#E8EAED</color>
+    <color name="colorOnSurface">#D1D5DB</color>
+
+    <!-- Legacy/Alias Colors -->
+    <color name="primaryBlue">#5CA3F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="onPrimary">#0F1419</color>
+    <color name="darkText">#E8EAED</color>
+
+    <!-- Additional UI Colors -->
+    <color name="accentLight">#1E3A5F</color>
+    <color name="cardBackground">#1A1F28</color>
+    <color name="divider">#2D3748</color>
 </resources>

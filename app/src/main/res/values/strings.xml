@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EuroPathway</string>
+    <string name="maptiler_api_key">A6QDZiwFSOqXYUgtqCKs</string>
 </resources>

@@ -4,6 +4,12 @@
 
     <application
 
+
+<meta-data
+    android:name="MAPLIBRE_API_KEY"
+    android:value="YOUR_API_KEY_HERE" />
+
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

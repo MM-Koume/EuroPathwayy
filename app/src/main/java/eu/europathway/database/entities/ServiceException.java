@@ -1,10 +1,11 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "service_exceptions")
-public class ServiceException {
+public class ServiceException {@NonNull
     @PrimaryKey(autoGenerate = true)
     public int id;
     public int service_id;

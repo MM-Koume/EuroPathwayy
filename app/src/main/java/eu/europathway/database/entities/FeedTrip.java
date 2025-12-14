@@ -1,5 +1,6 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
@@ -11,7 +12,7 @@ import androidx.room.Index;
                 @ForeignKey(entity = Feed.class, parentColumns = "feed_version", childColumns = "feed_version", onDelete = ForeignKey.CASCADE)
         },
         indices = {@Index("trip_id")})
-public class FeedTrip {
+public class FeedTrip {@NonNull
     public String feed_trip_id;
     public int city_id;
     public int trip_id;

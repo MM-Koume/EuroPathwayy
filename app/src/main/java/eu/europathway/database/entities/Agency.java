@@ -1,11 +1,13 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "agencies")
 public class Agency {
     @PrimaryKey(autoGenerate = true)
+    @NonNull
     public int agency_id;
     public int city_id;
     public String name;

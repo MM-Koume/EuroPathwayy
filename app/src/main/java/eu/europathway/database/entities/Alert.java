@@ -1,11 +1,13 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "alerts")
 public class Alert {
     @PrimaryKey(autoGenerate = true)
+    @NonNull
     public int alert_id;
     public String feed_version;
     public Integer route_id;

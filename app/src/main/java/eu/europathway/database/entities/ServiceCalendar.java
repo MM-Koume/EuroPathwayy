@@ -1,10 +1,11 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "service_calendar")
-public class ServiceCalendar {
+public class ServiceCalendar {@NonNull
     @PrimaryKey
     public int service_id;
     public int monday;

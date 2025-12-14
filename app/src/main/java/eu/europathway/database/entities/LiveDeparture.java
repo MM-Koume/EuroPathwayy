@@ -1,10 +1,11 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "live_departures")
-public class LiveDeparture {
+public class LiveDeparture {@NonNull
     @PrimaryKey(autoGenerate = true)
     public int departure_id;
     public int trip_id;

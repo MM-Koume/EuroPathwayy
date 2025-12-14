@@ -1,10 +1,11 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tickets")
-public class Ticket {
+public class Ticket {@NonNull
     @PrimaryKey(autoGenerate = true)
     public int ticket_id;
     public int fare_id;

@@ -1,5 +1,6 @@
 package eu.europathway.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
@@ -12,8 +13,11 @@ import androidx.room.Index;
         },
         indices = {@Index("stop_id")})
 public class FeedStop {
+
+    @NonNull
     public String feed_stop_id;
     public int city_id;
     public int stop_id;
     public String feed_version;
+
 }

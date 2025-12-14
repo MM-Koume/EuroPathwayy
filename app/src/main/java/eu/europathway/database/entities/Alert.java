@@ -1,39 +1,20 @@
 package eu.europathway.database.entities;
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-// ============================================
-// ALERT ENTITY
-// ============================================
-@Entity(tableName = "alerts",
-        indices = {@Index("route_id"), @Index("stop_id"), @Index({"start_time", "end_time"})})
+@Entity(tableName = "alerts")
 public class Alert {
-    @PrimaryKey
-    @ColumnInfo(name = "alert_id")
-    public int alertId;
-
-    @ColumnInfo(name = "route_id")
-    public Integer routeId;
-
-    @ColumnInfo(name = "stop_id")
-    public Integer stopId;
-
-    @ColumnInfo(name = "alert_type")
-    public String alertType; // 'DELAY', 'CANCELLATION', 'DETOUR', 'MAINTENANCE'
-
-    public String severity; // 'INFO', 'WARNING', 'CRITICAL'
+    @PrimaryKey(autoGenerate = true)
+    public int alert_id;
+    public String feed_version;
+    public Integer route_id;
+    public Integer stop_id;
+    public String alert_type;
+    public String severity;
     public String title;
     public String description;
-
-    @ColumnInfo(name = "start_time")
-    public Long startTime;
-
-    @ColumnInfo(name = "end_time")
-    public Long endTime;
-
-    @ColumnInfo(name = "created_at")
-    public long createdAt;
+    public String start_time;
+    public String end_time;
+    public long created_at;
 }

@@ -7,13 +7,13 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import eu.europathway.database.entities.Alert;
+import eu.europathway.database.entities.Ticket;
 
 @Dao
-public interface AlertDao {
+public interface TicketDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(Alert alert);
+    long insert(Ticket ticket);
 
-    @Query("SELECT * FROM alerts WHERE route_id = :routeId OR stop_id = :stopId")
-    List<Alert> getRelevant(Integer routeId, Integer stopId);
+    @Query("SELECT * FROM tickets WHERE user_id = :userId")
+    List<Ticket> getForUser(int userId);
 }

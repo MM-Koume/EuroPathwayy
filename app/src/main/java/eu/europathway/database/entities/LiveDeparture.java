@@ -1,48 +1,17 @@
 package eu.europathway.database.entities;
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-// ============================================
-// LIVE DEPARTURE ENTITY (Real-time)
-// ============================================
-@Entity(tableName = "live_departures",
-        foreignKeys = {
-                @ForeignKey(entity = Trip.class,
-                        parentColumns = "trip_id",
-                        childColumns = "trip_id",
-                        onDelete = ForeignKey.CASCADE),
-                @ForeignKey(entity = Stop.class,
-                        parentColumns = "stop_id",
-                        childColumns = "stop_id",
-                        onDelete = ForeignKey.CASCADE)
-        },
-        indices = {@Index("trip_id"), @Index("stop_id"), @Index("last_updated")})
+@Entity(tableName = "live_departures")
 public class LiveDeparture {
-    @PrimaryKey
-    @ColumnInfo(name = "departure_id")
-    public int departureId;
-
-    @ColumnInfo(name = "trip_id")
-    public int tripId;
-
-    @ColumnInfo(name = "stop_id")
-    public int stopId;
-
-    @ColumnInfo(name = "scheduled_time")
-    public String scheduledTime;
-
-    @ColumnInfo(name = "estimated_time")
-    public String estimatedTime;
-
-    @ColumnInfo(name = "delay_minutes")
-    public int delayMinutes;
-
-    public String status; // 'ON_TIME', 'DELAYED', 'CANCELLED'
-
-    @ColumnInfo(name = "last_updated")
-    public long lastUpdated;
+    @PrimaryKey(autoGenerate = true)
+    public int departure_id;
+    public int trip_id;
+    public int stop_id;
+    public String scheduled_time; // HH:MM:SS
+    public String estimated_time;
+    public Integer delay_minutes;
+    public String status; // ON_TIME, DELAYED, CANCELLED
+    public long last_updated;
 }

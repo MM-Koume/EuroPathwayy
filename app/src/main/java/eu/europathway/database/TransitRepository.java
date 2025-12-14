@@ -13,7 +13,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import java.util.List;
-import java.util.concurrent.Future;
 
 /**
  * Repository class - Single source of truth for data
@@ -131,12 +130,14 @@ public class TransitRepository {
 
     /**
      * Get nearby stops within a radius
-     * @param lat Current latitude
-     * @param lon Current longitude
+     *
+     * @param lat    Current latitude
+     * @param lon    Current longitude
      * @param radius Radius in kilometers
+     * @return
      */
-    public void getNearbyStops(double lat, double lon, double radius,
-                               ApiCallback<List<Stop>> callback) {
+    public List<Stop> getNearbyStops(double lat, double lon, double radius,
+                                     ApiCallback<List<Stop>> callback) {
         apiService.getNearbyStops(lat, lon, radius).enqueue(new Callback<List<Stop>>() {
             @Override
             public void onResponse(Call<List<Stop>> call, Response<List<Stop>> response) {
@@ -150,6 +151,7 @@ public class TransitRepository {
                 callback.onError(t);
             }
         });
+        return null;
     }
 
     public void insertStop(Stop stop) {

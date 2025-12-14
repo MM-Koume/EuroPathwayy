@@ -5,15 +5,13 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import java.util.List;
-
-import eu.europathway.database.entities.Fare;
+import eu.europathway.database.entities.Service;
 
 @Dao
-public interface FareDao {
+public interface ServiceDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    long insert(Fare fare);
+    long insert(Service service);
 
-    @Query("SELECT * FROM fares WHERE city_id = :cityId")
-    List<Fare> getForCity(int cityId);
+    @Query("SELECT * FROM services WHERE service_id = :id")
+    Service getById(int id);
 }

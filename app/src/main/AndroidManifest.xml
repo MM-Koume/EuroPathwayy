@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -37,6 +38,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RoutesActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
+
+        <activity
+            android:name=".NearbyStopsActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
+
+        <activity
+            android:name=".FaresActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
 
     </application>
 
